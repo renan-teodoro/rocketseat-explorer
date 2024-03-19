@@ -1,0 +1,74 @@
+/* fonts foram pegas do Google Fonts, e as tags foram copiadas pelo <link> presente no google e
+colados no index.html */
+/* seleção de tags é feita normalmente */
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+/* seleção de id é feita com #.
+o margin: auto é um 'short-hand' e faz com que a largura fixa seja responsiva até o 
+tamanho máximo de 592px na tela (isso altera as 4 margens presentes no elemento, top,
+left, right e bottom), caso o tamanho seja inferiror a 592px, uma barra de rolagem
+horizontal surge */
+/* margin: a b; --> o primeiro valor (a) do margin é sempre top e bottom, e o segundo valor (b)
+é referente às laterais. */
+/* margin: a b c; --> o primeiro valor (a) é margin-top, o segundo valor (b) é margin-sides e
+o terceiro valor (c) é margin-bottom */
+/* margin: a b c d; --> os valores andam conforme o relógio, iniciando em cima e girando na 
+orientação horária: a=top, b=right, c=bottom, d=left*/
+#hero {
+  width: 592px;
+  margin: 0 auto 72px;
+}
+
+#hero img {
+  margin-bottom: 72px;
+}
+
+/* por padrão, o peso da fonte vem em bold, portanto, quando necessário, é preciso mudar o 
+font-weight para selecionar outro tipo.
+line-height é o espacamento vertical das linhas e entrelinhas */
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 56px;
+  margin-bottom: 32px;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+span,
+a {
+  color: #ff9900;
+}
+
+p,
+#footer {
+  color: #7d7987;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 33px;
+}
+
+/* a+a significa que estou pegando um a (2º a), que anterior a ele, tem outro elemento a */
+#footer a + a {
+  margin-left: 28px;
+}
+
+/* #id .class */
+#footer .line {
+  width: 568px;
+  height: 0px;
+  margin: 0 auto 8px;
+  border: 1px solid #eceff2;
+}
+
+#balls {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
