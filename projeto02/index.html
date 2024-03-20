@@ -2,9 +2,17 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Treinos Personalizados</title>
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,24 +23,24 @@
   
   <div class="page">
     <!-- header é do tipo block -->
-    <header> 
-      <img src="images/Logo.svg" alt="Treine.me">
-
-      <!-- navigation bar (nav) serve para colocar links de navegação do site
+    
+    <!-- navigation bar (nav) serve para colocar links de navegação do site
       contendo destinos desejados dentro do site e, de acordo com o A11y,
       nav não deve estar dentro do header -->
       <!-- nav é do tipo block -->
       <nav>
+        <a id="logo" href="#">
+          <img src="images/Logo.svg" alt="Treine.me">
+        </a>
         <!-- ul (unordered list), ol (ordered list) -->
         <ul>
           <!-- li (list) é um tópico que será exibido na list -->
-          <li>Home</li>
-          <li>Sobre</li>
-          <li>Treinar</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Treinar</a></li>
         </ul>
       </nav>
 
-    </header>
   
     <!-- main é do tipo block -->
     <main>
@@ -41,15 +49,15 @@
       representações textuais e, por padrão, a section sempre receberá a partir da tag h2,
       porém, como será exatamente o título, usaremos h1 -->
       <section class="text">
-        <h1>Treinos exclusivos para você!</h1>
+        <h1>Treinos <span>exclusivos</span><br /> para você!</h1>
 
         <p>Nós criamos treinos <strong>exclusivos e únicos para você</strong>. <br>
         Invista no seu corpo e <strong>tenha muito mais performance</strong>
-        e qualidade de vida.</p>
+        e <br>qualidade de vida.</p>
 
-        <button>
+        <button class="whatsapp">
           <img src="images/whatsapp-logo.svg" alt="ícone do whatsapp">
-          Comece já!
+            Comece já!
         </button>
       </section>
 
@@ -69,7 +77,7 @@
 
   </div>
 
-  <img src="images/balls.svg" alt="bolas verdes decorativas no canto inferior direito da tela">
+  <img id="balls" src="images/balls.svg" alt="bolas verdes decorativas no canto inferior direito da tela">
 
 </body>
 </html>

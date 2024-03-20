@@ -21,15 +21,20 @@ body {
 
 body {
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  /* linear-gradient(rotação inicial da cor em grau, cor-aplicada  transparência, cor-aplicada2  transparência) */
+  background: linear-gradient(180deg, #ffffff 0%, #e3fff8a4 100%);
+  min-height: 100vh;
 }
 
 .page {
-  width: 600px;
-  margin: 65px auto 0;
+  width: 1000px;
+  margin: 0 auto 0;
+  padding-top: 65px;
 }
 
 /* O header é considerado um flex-box, portanto, o eixo principal é chamado de 'main axis' */
-header {
+nav {
   /* display: flex faz com que toda box de dentro desse elemento se ajuste ao 
   lado do outro */
   display: flex;
@@ -44,4 +49,88 @@ nav ul {
   gap: 48px;
   margin: 0;
   padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #1f1534;
+  opacity: 0.5;
+}
+
+/* os ':' após a tag, significa que é uma 'pseudo class', isto é, indica um
+estado específico para uma situação no elemento */
+ul li a:hover {
+  font-weight: bold;
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 58px 153px 140px 119px;
+}
+
+h1 {
+  font-family: "Mulish", sans-serif;
+  font-size: 49px;
+  line-height: 56px;
+  color: #105070;
+}
+
+h1 span {
+  color: #89c5cc;
+}
+
+section p {
+  font-size: 14px;
+  line-height: 28px;
+  margin: 40px 0;
+  color: #7d7987;
+}
+
+button {
+  background: #69b99d;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px 15px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  text-transform: uppercase;
+  font-family: "DM Sans", sans-serif;
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button:hover {
+  background: #4fad8c;
+}
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 82px;
+  margin-bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1f1534;
+}
+
+#balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
