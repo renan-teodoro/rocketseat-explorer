@@ -51,6 +51,7 @@ header p {
   font-family: "Poppins", sans-serif;
   font-weight: regular;
   font-size: 16px;
+  line-height: 26px;
   color: #42d3ff;
 }
 
@@ -67,7 +68,7 @@ form {
   gap: 48px;
 }
 
-form fieldset {
+fieldset {
   border: none;
 
   /* alguns navegadores bugam com essas informações e não aplicam
@@ -85,7 +86,7 @@ form fieldset {
 .fieldset-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
 fieldset legend {
@@ -237,4 +238,37 @@ nth-child(x) indica o number the child, que seleciona o filho de número x */
   /* pelas estratégias de acessibilidade, a borda de seleção não é mostrada.
   Para isso, deve-se solocar o outline */
   outline: 2px solid #000;
+}
+
+footer {
+  background: #f0f0f4;
+  /* para tirar o padding da div, pode-se colocar um position absolute, ou 
+  transformá-lo em footer */
+  height: 136px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+  margin-bottom: 100px;
+  border-top: 1px solid #d6d6d6;
+  border-radius: 0 0 8px 8px;
+}
+
+footer .button {
+  background: #04d361;
+  border: 0;
+  border-radius: 8px;
+  height: 56px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+}
+
+footer .button:hover {
+  background: #04a74b;
+}
+
+input:invalid {
+  border: 1px solid #ff1010;
 }

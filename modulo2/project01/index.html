@@ -22,7 +22,7 @@
       <p>The first step is fill this enrollment form.</p>
     </header>
   
-    <form>
+    <form id="event-form">
 
       <!-- fieldset é um conjunto, que possui uma legenda -->
       <fieldset>
@@ -35,17 +35,23 @@
             <!-- labels são in-line elements. Isso faz com que não aceite as propriedades
             width, já inputs são inline-blocks, que aceita width -->
             <label for="event-title">Event title <span>(min 8 characters)</span></label>
-            <input type="text" name="event-title" id="event-title">
+            <input 
+            type="text" 
+            name="event-title" 
+            id="event-title"
+            required
+            minlength="8"
+            >
           </div>
   
           <div class="input-wrapper">
             <label for="event-link">Event link <span>(start with https://)</span></label>
-            <input type="url" name="event-link" id="event-link">
+            <input type="url" name="event-link" id="event-link" required>
           </div>
 
           <div class="input-wrapper">
             <label for="event-whatsapp">Whatsapp number for contact <span>(just numbers)</span></label>
-            <input type="number" name="whatsapp-number" id="event-whatsapp">
+            <input type="phone" name="whatsapp-number" id="event-whatsapp" required>
           </div>
 
           <div class="input-wrapper">
@@ -78,13 +84,13 @@
             <label for="event-email">Admin e-mail 
               <span>(type a valid e-mail)</span>
             </label>
-            <input type="email" name="email-number" id="event-email">
+            <input type="email" name="email-number" id="event-email" required>
           </div>
 
           <div class="input-wrapper">
             <label for="event-password">Password for participants
               <span>(min 8 characters)</span></label>
-            <input type="password" name="password-number" id="event-password">
+            <input type="password" name="password-number" id="event-password" minlength="8" required>
           </div>
 
           <div class="checkbox-wrapper">
@@ -105,17 +111,17 @@
 
             <div class="input-wrapper">
               <label for="event-date">Date</label>
-              <input type="date" name="event-date" id="event-date">
+              <input type="date" name="event-date" id="event-date" required>
             </div>
         
             <div class="input-wrapper">
               <label for="event-begin">From</label>
-              <input type="time" name="begin-hour" id="event-begin">
+              <input type="time" name="begin-hour" id="event-begin" required>
             </div>
         
             <div class="input-wrapper">
               <label for="event-end">To</label>
-              <input type="time" name="end-hour" id="event-end">
+              <input type="time" name="end-hour" id="event-end" required>
             </div>
 
           </div>
@@ -125,6 +131,18 @@
       </fieldset>
 
     </form>
+    <footer class="form-buttons">
+      <!-- se o button não houver atribuições de ações (como form ou type),
+      e estiver dentro de um formulário, todos os botões assim submeterão o
+      formulário -->
+      <!-- para atrelar uma ação ao button, colocar um form., ou action -->
+      <button 
+      class="button" 
+      type="submit" 
+      form="event-form">
+      Save event
+      </button>
+    </footer>
   </div>
 
 </body>
