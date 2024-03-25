@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   /* linear-gradient(rotação inicial da cor em grau, cor-aplicada  transparência, cor-aplicada2  transparência) */
-  background: linear-gradient(180deg, #ffffff 0%, #e3fff8a4 100%);
+  background: linear-grad.ient(180deg, #ffffff 0%, #e3fff8a4 100%);
   min-height: 100vh;
 }
 

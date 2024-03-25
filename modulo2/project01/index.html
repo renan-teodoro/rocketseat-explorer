@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create your event</title>
+
+  <link rel="stylesheet" href="style.css">
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Create and Share Your Event!</h1>
+      <p>The first step is fill this enrollment form.</p>
+    </header>
+  
+    <form>
+
+      <!-- fieldset é um conjunto, que possui uma legenda -->
+      <fieldset>
+
+        <div class="fieldset-wrapper">
+  
+          <legend>Event Info</legend>
+          <!-- encapsulando alguns campos -->
+          <div class="input-wrapper">
+            <!-- labels são in-line elements. Isso faz com que não aceite as propriedades
+            width, já inputs são inline-blocks, que aceita width -->
+            <label for="event-title">Event title <span>(min 8 characters)</span></label>
+            <input type="text" name="event-title" id="event-title">
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="event-link">Event link <span>(start with https://)</span></label>
+            <input type="url" name="event-link" id="event-link">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-whatsapp">Whatsapp number for contact <span>(just numbers)</span></label>
+            <input type="number" name="whatsapp-number" id="event-whatsapp">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-info">Extra information</label>
+            <textarea name="extra-info" id="event-info" cols="30" rows="10"></textarea>
+          </div>
+          
+          <div class="input-wrapper">
+            <label for="event-category">Category</label>
+            <select id="event-category">
+              <option value="live">Live</option>
+              <option value="podcast">Podcast</option>
+              <option value="mentorship">Mentorship</option>
+              <option value="show">Show</option>
+              <option value="party">Party</option>
+              <option value="masterclass">Masterclass</option>
+            </select>
+          </div>
+
+        </div>
+        
+      </fieldset>
+
+      <fieldset>
+
+        <div class="fieldset-wrapper">
+          <legend>Privacy</legend>
+
+          <div class="input-wrapper">
+            <label for="event-email">Admin e-mail 
+              <span>(type a valid e-mail)</span>
+            </label>
+            <input type="email" name="email-number" id="event-email">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-password">Password for participants
+              <span>(min 8 characters)</span></label>
+            <input type="password" name="password-number" id="event-password">
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" name="Privacy-event" id="event-privacy">
+            <label for="event-privacy">Private event</label>
+          </div>
+
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+      
+        <div class="fieldset-wrapper">
+          <legend>Date and Time</legend>
+      
+          <div class="col-3">
+
+            <div class="input-wrapper">
+              <label for="event-date">Date</label>
+              <input type="date" name="event-date" id="event-date">
+            </div>
+        
+            <div class="input-wrapper">
+              <label for="event-begin">From</label>
+              <input type="time" name="begin-hour" id="event-begin">
+            </div>
+        
+            <div class="input-wrapper">
+              <label for="event-end">To</label>
+              <input type="time" name="end-hour" id="event-end">
+            </div>
+
+          </div>
+      
+        </div>
+      
+      </fieldset>
+
+    </form>
+  </div>
+
+</body>
+</html>
