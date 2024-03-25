@@ -1,0 +1,28 @@
+<!-- Um form possui protocolos html em sua funcionalidade
+  GET: recebe e/ou envia dados recursos/dados
+  POST: envia dados para serem processados
+ -->
+<!-- o action indica o caminho específico -->
+
+<!-- dentro de um http, você possui um header (apresenta o 
+ url, especificação do método, status code, tokens, etc), body (retorna o pedido/solicitação tratada e formatada)
+ Dentro do body, você possui o payload, que é o corpo da requisição, onde você envia os dados para o servidor,
+ e o servidor processa e retorna a resposta. Dentro do payload da requisição, apresentada no DevTools, possuem 
+ params que são incrementados na url, chamados Query Strings Parameters, que indicam alguns itens, por exemplo,
+ ao realizar uma pesquisa da palavra Deus no google, virá no seguinte formato:
+ www.google.com/search?q=Deus&sxsrf=APq-WBv78s8d_MsSD-zsdS2%...&ei=SDFijSDIfj... Onde alguns parâmetros recebem 
+ valores atribuídos, como: q= Deus; sxsrf= ..., etc. Os demarcadores de atribuições como estas, geralmente vem 
+ marcados pelos caracteres ? & =. -->
+
+ <!-- <form action="/search"> -->
+<!-- <form >
+  <input type="text" name="q" id="q">
+  <input type="hidden" name="sxsrf" value="APq-WBv78s8d_MsSD-zsdS2">
+  <input type="submit" value="Search">
+</form> -->
+
+<!-- Se aparecer o ?, quer dizer que há campos escondidos e o site de pesquisas está enviando informações através
+  de um protocolo GET -->
+<!-- Quando enviamos um dado pelo form, as informações são passadas para o body da request e é possível vê-las nos
+payloads -->
+
