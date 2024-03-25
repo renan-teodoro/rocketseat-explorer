@@ -1,0 +1,166 @@
+/* Regra nº1 para responsividade é: Mobile First */
+/* Regra nº2 é: quando se usa tamanho fixo (40px) para um site,
+uma pessoa que necessita da fonte maior para melhor enxergar, não
+consegue alterar seu tamanho, portanto, deve-se utilizar unidade 
+relativa de tamanho! */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* REM = Root EM, é a unidade relativa de medida. Ele pega a un.
+de pixels da fonte do seu navegador (geralmente são 16px), que é
+equivalente a 1 REM. Para conferir qual é a unidade do navegador,
+vá em DevTools e acesse a aba de Computed, com a medida em rem, e
+lá, você pode encontrar a font-size do elemento que você alterou 
+para rem. */
+/* Dessa meneira, todas as vezes que for colocar o tamanho, deve-
+ria ser convertido o valor dos pixels. Mas para facilitar, se pe-
+gar o valor dos pixels nativos, e multiplicar por 0.625, se tem a
+unidade padrão de 10px. Isso faz com que a conversão seja mais fá-
+cil de ser executada, por exemplo: */
+/* 
+un. nativa = 16px;
+nova un. = 10px;
+proporção rem = nova un. / un. nativa = 10 / 16 = 0.625 (ou 62.5%);
+novo rem = un. nativa * proporção rem = 16px * 0.625 = 10px;
+
+un. necessária = 40px;
+un. necessária rem = un. necessária / novo rem = 40/10 = 4.0rem;
+*/
+:root {
+  /* 1rem = 16px */
+  /* aplicando a proporcionalidade: */
+  font-size: 62.5%; /* 10px */
+  /* a partir de agora, o elemento que tiver 40px,  */
+}
+
+body {
+  background: #ece9fd;
+  padding: 6rem 2.3rem 6.6rem;
+  font-family: "Epilogue", sans-serif;
+}
+
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+h1 {
+  /* 40 / 16px = 2.5rem */
+  /* font-size: 2.5rem; */
+  /* utilizando novo rem: */
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: 800;
+
+  color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+
+main p:first-child {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+
+  color: #7158ef;
+
+  margin-bottom: 1.7rem;
+}
+
+main h1 + p {
+  color: rgba(10, 0, 54, 0.64);
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
+
+  font-size: 1.6rem;
+}
+
+a {
+  color: #090039;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7158ef;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: 7.2rem;
+
+  color: #090039;
+  font-size: 2.4rem;
+  line-height: 3.2rem;z
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  max-width: 25.7rem; /* max-width faz com que, se diminuir
+  o tamanho, ele seja responsível */
+
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+ul li:first-child {
+  gap: 3.8rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8rem;
+  line-spacing: -0.2rem;
+  margin-right: 3.8rem;
+}
+
+/* media queries fazem o ajuste do tamanho da tela,
+alternando entre os designs mobile e web */
+@media (min-width: 40em) { /* a partir de 640px nativos ele aplica
+  o design web */
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1020px;
+    display:flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.4rem;
+    max-width: 450px;
+    align-items: center;
+  }
+
+  ul li + li {
+    margin-top: 3.2rem;
+  }
+
+  ul li:first-child {
+    gap:6.6rem;
+  }
+}
